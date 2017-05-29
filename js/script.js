@@ -1,6 +1,12 @@
 var panels = document.querySelectorAll('.panel');
 
 function toggleOpen() {
+	
+	for(var i = 0; i < this.parentElement.children.length ; i++) {
+		if(this.parentElement.children[i].className.includes('open')) {
+			this.parentElement.children[i].classList.remove('open');
+		}
+	}
 	this.classList.toggle('open');
 }
 
